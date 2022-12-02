@@ -2,7 +2,6 @@ databases:
   - name: db # Render PG14
     databaseName: compose-postgres
     user: compose-postgres
-    password: compose-postgres
     postgresMajorVersion: 14
 
 services:
