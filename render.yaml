@@ -1,0 +1,29 @@
+databases:
+  - name: db # Render PG14
+    databaseName: compose-postgres
+    user: compose-postgres
+    password: compose-postgres
+    postgresMajorVersion: 14
+
+services:
+  - type: web
+    name: docker-spring-boot-postgres:latest
+    env: docker
+    dockerfilePath: ./src/main/docker/Dockerfile
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: "jdbc:postgresql://db:5432/compose-postgres"
+      - key: SPRING_DATASOURCE_USERNAME
+        value: "compose-postgres"
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: "compose-postgres"
+      - key: SPRING_JPA_HIBERNATE_DDL_AUTO
+        value: "create-drop"
+      - key: SPRING_SQL_INIT_MODE
+        value: "always"
+      - key: SPRING_JPQ_DEFER-DATASOURCE-INITIALIZATION
+        value: "true"
+      - key: SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT
+        value: "org.hibernate.dialect.PostgreSQLDialect"
+      - key: SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT-SQL
+        value: "true"
