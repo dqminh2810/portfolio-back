@@ -1,8 +1,7 @@
 databases:
   - name: db # Render PG14
-    databaseName: compose-postgres
-    user: compose-postgres
-    password: compose-postgres
+    databaseName: test
+    user: test
     postgresMajorVersion: 14
 
 services:
@@ -12,11 +11,11 @@ services:
     dockerfilePath: ./src/main/docker/Dockerfile
     envVars:
       - key: SPRING_DATASOURCE_URL
-        value: "jdbc:postgresql://db:5432/compose-postgres"
+        value: "jdbc:postgresql://db:5432/test"
       - key: SPRING_DATASOURCE_USERNAME
-        value: "compose-postgres"
+        value: "test"
       - key: SPRING_DATASOURCE_PASSWORD
-        value: "compose-postgres"
+        value: "test"
       - key: SPRING_JPA_HIBERNATE_DDL_AUTO
         value: "create-drop"
       - key: SPRING_SQL_INIT_MODE
