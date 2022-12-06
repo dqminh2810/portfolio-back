@@ -19,6 +19,7 @@ INSERT INTO skill (id, name, type_id) VALUES
                                     (nextval('skill_seq'), 'VueJS', (SELECT st.id FROM skill_type AS st WHERE st.name='Web framework')),
                                     (nextval('skill_seq'), 'Angular', (SELECT st.id FROM skill_type AS st WHERE st.name='Web framework')),
                                     (nextval('skill_seq'), 'J2EE', (SELECT st.id FROM skill_type AS st WHERE st.name='Web framework')),
+                                    (nextval('skill_seq'), 'Spring Boot', (SELECT st.id FROM skill_type AS st WHERE st.name='Web framework')),
                                     (nextval('skill_seq'), 'NodeJS', (SELECT st.id FROM skill_type AS st WHERE st.name='Web framework')),
                                     (nextval('skill_seq'), 'Laravel', (SELECT st.id FROM skill_type AS st WHERE st.name='Web framework')),
 --                                  Database
@@ -36,6 +37,7 @@ INSERT INTO skill (id, name, type_id) VALUES
                                     (nextval('skill_seq'), 'SVM', (SELECT st.id FROM skill_type AS st WHERE st.name='Machine learning')),
                                     (nextval('skill_seq'), 'Logistic regression', (SELECT st.id FROM skill_type AS st WHERE st.name='Machine learning')),
                                     (nextval('skill_seq'), 'Neural network', (SELECT st.id FROM skill_type AS st WHERE st.name='Machine learning')),
+
 --                                  Others
                                     (nextval('skill_seq'), 'Dialogflow', (SELECT st.id FROM skill_type AS st WHERE st.name='Others')),
                                     (nextval('skill_seq'), 'Firebase', (SELECT st.id FROM skill_type AS st WHERE st.name='Others'));
