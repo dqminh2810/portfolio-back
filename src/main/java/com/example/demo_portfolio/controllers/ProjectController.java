@@ -17,6 +17,7 @@ public class ProjectController {
         this.projectService = projectService;
     }
 
+
     @GetMapping(value = "/projects")
     List<Project> getProjects(){
         return projectService.getProjects();
