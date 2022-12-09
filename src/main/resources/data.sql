@@ -245,7 +245,8 @@ INSERT INTO project_technologies (project_id, technologies) VALUES
 -- Education
 INSERT INTO education (id, description, domain, establishment, from_date, to_date) VALUES
                                                     (nextval('education_seq'), 'test', 'Computer Science', 'Polytech Nice Sohpia', '2018', '2022'),
-                                                    (nextval('education_seq'), 'test2', 'DUT Informatique, Information Technology', 'IUT Nice Côte d Azur', '2016', '2018');
+                                                    (nextval('education_seq'), 'test2', 'DUT Informatique, Information Technology', 'IUT Nice Côte d Azur', '2016', '2018'),
+                                                    (nextval('education_seq'), 'test2', 'Listening: 480 – Reading: 415', 'TOEIC – IIG Vietnam, Danang', 'July 2022', 'July 2024');
 
 
 -- Person
