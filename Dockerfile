@@ -14,6 +14,7 @@
 # ENTRYPOINT ["java", "-jar", "application.jar"]
 
 FROM openjdk:17-jdk-slim
+CMD ["mvn", "clean", "install"]
 ARG JAR_FILE=*.jar
 COPY ${JAR_FILE} application.jar
 EXPOSE 8080
