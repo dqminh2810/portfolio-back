@@ -137,7 +137,7 @@ INSERT INTO project_technologies (project_id, technologies) VALUES
 INSERT INTO project (id, description, establishment, name, from_date, to_date, type_id) VALUES
     (
         nextval('project_seq'),
-        '-Design and development of the J2EE SOAP web service which is possible to simulate and process the logic of a command chain from a client CLI developed in Java. This web service is also consume the third-party external REST service written in C#.   ' ||
+        '-Design and development of the J2EE SOAP web service which is possible to simulate and process the logic of a command chain from a client CLI developed in Java. This web service is also consume the third-party external REST service written in C#.' ||
         '-This web service is also linked to the third part REST API written in C # used as an external service.   ' ||
         '-CI / CD is also implemented during the project',
         'Polytech Nice Sophia',
@@ -156,11 +156,12 @@ INSERT INTO project_technologies (project_id, technologies) VALUES
 INSERT INTO project (id, description, establishment, name, from_date, to_date, type_id) VALUES
     (
         nextval('project_seq'),
-        '-Full stack web developer ' ||
-        '-Main tasks : Development of the web application with the proposed features in the real estate domain; Maintain and deploy the environment for running application',
+        '- Development of the web application (SPA & PWA) with the proposed features in the real estate domain' ||
+        '- Development of REST APIs allowing to execute the relevant operations and store data' ||
+        '- Maintain and deploy the environment for running application',
         'Kalixys',
-        'Full-stack web developer',
-        'September 2021',
+        'Full stack web developer',
+        'July 2021',
         'March 2022',
         (SELECT pt.id FROM project_type AS pt WHERE pt.name='job')
     );
@@ -170,6 +171,29 @@ INSERT INTO project_technologies (project_id, technologies) VALUES
                                                                 ((SELECT currval('project_seq')), 'Click&Cloud'),
                                                                 ((SELECT currval('project_seq')), 'Docker'),
                                                                 ((SELECT currval('project_seq')), 'Gitlab CI/CD');
+INSERT INTO project (id, description, establishment, name, from_date, to_date, type_id) VALUES
+    (
+        nextval('project_seq'),
+        '- Development of dashboard web application allowing to administrator visualize and perform operations relevant to data flows in the system. ' ||
+        '- Development of REST APIs following microservice architecture allowing to execute the relevant operations and synthetize data.'  ||
+        '- Authentication/authorization using third party authentication system following Oauth2 protocol.' ||
+        '- Integrate to the CI/CD chain',
+        'Groupe Creative',
+        'Full stack engineer',
+        'March 2023',
+        'July 2023',
+        (SELECT pt.id FROM project_type AS pt WHERE pt.name='job')
+    );
+INSERT INTO project_technologies (project_id, technologies) VALUES
+                                                                ((SELECT currval('project_seq')), 'VueJS'),
+                                                                ((SELECT currval('project_seq')), 'Spring Boot'),
+                                                                ((SELECT currval('project_seq')), 'Postgres'),
+                                                                ((SELECT currval('project_seq')), 'ForgeRock'),
+                                                                ((SELECT currval('project_seq')), 'Jenkins'),
+                                                                ((SELECT currval('project_seq')), 'Docker'),
+                                                                ((SELECT currval('project_seq')), 'Argo'),
+                                                                ((SELECT currval('project_seq')), 'Github'),
+                                                                ((SELECT currval('project_seq')), 'GCP');
 
 INSERT INTO project (id, description, establishment, name, from_date, to_date, type_id) VALUES
     (
@@ -215,7 +239,7 @@ INSERT INTO project (id, description, establishment, name, from_date, to_date, t
         'Kalixys',
         'Web development internship',
         'April 2021',
-        'August 2021',
+        'July 2021',
         (SELECT pt.id FROM project_type AS pt WHERE pt.name='internship')
     );
 INSERT INTO project_technologies (project_id, technologies) VALUES
